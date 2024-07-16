@@ -32,6 +32,7 @@ const SystemLogRequest = () => {
         await axios.post('http://localhost:5500/logger/getlogsbyuser', {username: e.target.value}, {withCredentials: true, headers: {
             "Role": user.resp.data.user.user_role
         }}).then(resp => {
+            console.log("TRR");
             console.log(resp);
             //setLogRecs(resp.data);
         }).catch(err => {

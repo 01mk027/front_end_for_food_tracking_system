@@ -27,6 +27,7 @@ import SystemLogRequest from "./pages/SystemLogRequest";
 import {SuperAdminProtection} from "./components/SuperAdminProtection";
 import SortDroppedMenuItems from "./pages/SortDroppedMenuItems";
 import { useAuth } from "./hooks/useAuth";
+import UpdateIndividualInformation from "./pages/UpdateIndividualInfornation";
 
 
 function App() {
@@ -181,6 +182,20 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+
+        <Route
+          path="/updateindividualinfo"
+          element={
+            <ProtectedRoute>
+              
+              <UpdateIndividualInformation />
+              
+            </ProtectedRoute>
+          }
+        />
+
+        
 
         <Route
           path="/updaterecipe"
